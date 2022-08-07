@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 django = "==4.0"
 django-redis = "*"
-django-channels = "*"
 python-decouple = "*"
+channels = "*"
+psycopg2-binary = "*"
+pillow = "*"
 
 [dev-packages]
 
