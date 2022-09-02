@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from decouple import config
 from pathlib import Path
+from apps.authentication import staticstuffs
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -155,3 +156,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
+# CSRF_TRUSTED_ORIGINS = staticstuffs.domian_name_list
