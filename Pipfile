@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 django = "==4.0"
-django-redis = "*"
 python-decouple = "*"
 channels = "*"
 psycopg2-binary = "*"
 pillow = "*"
+channels-redis = "*"
 
 [dev-packages]
 
