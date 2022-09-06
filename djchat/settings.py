@@ -125,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kathmandu'
 
 USE_I18N = True
 
@@ -136,7 +136,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = "static/"
+# STATIC_ROOT = "static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "assets",
+]
 
 MEDIA_ROOT = BASE_DIR/'media'
 MEDIA_URL = '/media/'
@@ -152,7 +156,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [(config("REDIS_URL"), config("REDIS_PORT"))],
+            "hosts": [('redis', config("REDIS_PORT"))],
         },
     },
 }
