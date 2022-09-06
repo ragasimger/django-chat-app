@@ -16,8 +16,8 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         )
         print("Message Sent")
 
-    async def disconnect(self):
-        print("WebSocket Disconnected")
+    async def disconnect(self, close_code):
+        print("WebSocket Disconnected", close_code)
         
 
 class GroupChatConsumer(AsyncJsonWebsocketConsumer):
